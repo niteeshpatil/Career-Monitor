@@ -1,12 +1,10 @@
 package com.example.Career.Monitor.controller;
 
-import com.example.Career.Monitor.model.Links;
+import com.example.Career.Monitor.model.Link;
 import com.example.Career.Monitor.service.LinksService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,8 +15,22 @@ public class LinksController {
     LinksService linksService;
 
     @GetMapping("allLinks")
-    public ResponseEntity<List<Links>> getAllLinks(){
+    public ResponseEntity<List<Link>> getAllLinks(){
         return linksService.getAllLinks();
     }
 
+    @PostMapping("addLinks")
+    public ResponseEntity<String> addLink(@RequestBody Link link){
+        return linksService.addLink(link);
+    }
+
+    @DeleteMapping("delete/{id}")
+    public ResponseEntity<String> deleteQuestionsById(@PathVariable Integer id){
+        return linksService.deleteLinkById(id);
+    }
+
+    @PutMapping("/updateLink/{id}")
+    public ResponseEntity<String> updateLink(@PathVariable Integer id, @RequestBody Link updatedLink) {
+        return linksService.updateLink(id, updatedLink);
+    }
 }
