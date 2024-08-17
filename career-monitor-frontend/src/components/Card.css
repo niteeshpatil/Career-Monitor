@@ -1,0 +1,39 @@
+/* Card.css */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: fit-content; /* Adjusts card width to fit content */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  margin-bottom: 16px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end; /* Align items to the end of the footer */
+  align-items: center;
+}
+
+.card-footer-left {
+  margin-right: auto; /* Pushes the left content to the start */
+}
+
+.card-footer-right {
+  display: flex;
+  gap: 16px; /* Space between items */
+}
+
+.card-footer-left p,
+.card-footer-right p {
+  margin: 4px 10px;
+}

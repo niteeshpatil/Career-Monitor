@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("links")
 public class LinksController {
     @Autowired
@@ -32,5 +33,10 @@ public class LinksController {
     @PutMapping("/updateLink/{id}")
     public ResponseEntity<String> updateLink(@PathVariable Integer id, @RequestBody Link updatedLink) {
         return linksService.updateLink(id, updatedLink);
+    }
+
+    @PatchMapping ("/visitLink/{id}")
+    public ResponseEntity<String> visitLink(@PathVariable Integer id) {
+        return linksService.visitLink(id);
     }
 }
