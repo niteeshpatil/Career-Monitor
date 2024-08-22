@@ -1,0 +1,76 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears on top of other content */
+}
+
+.popup-content {
+  background-color: #ffffff; /* White background for the popup */
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 500px;
+  position: relative; /* Position relative for the close button */
+}
+
+.popup-content .form-group {
+  margin-bottom: 1rem;
+}
+
+.popup-content .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.popup-content .form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.popup-content .button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem; /* Space between buttons */
+  margin-top: 1rem;
+}
+
+.popup-content .button-group button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-add {
+  background-color: #28a745; /* Green color for Add button */
+  color: white;
+}
+
+.btn-add:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.btn-close {
+  background-color: #dc3545; /* Red color for Close button */
+  color: white;
+}
+
+.btn-close:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.text-danger {
+  color: #dc3545; /* Red color for error messages */
+  font-weight: bold; /* Bold text for emphasis */
+}

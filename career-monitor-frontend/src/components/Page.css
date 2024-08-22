@@ -1,0 +1,102 @@
+/* Container for the entire page */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1400px; /* Increased max-width for the entire page */
+  width: 100%;
+  background-color: rgb(101, 101, 101);
+}
+
+/* WelcomeDashboard styles */
+.welcome-dashboard {
+  width: 100%; /* Ensure it takes full width of its container */
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 1200px; /* Set a max-width for better readability */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+/* Card styles */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  max-width: 100%; /* Allows the card to scale with the page */
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease-in-out; /* Smooth transition for zoom */
+}
+
+/* Ensure the card content scales well */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.card-body {
+  margin-bottom: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+/* Zoom effect on hover */
+.card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 10px;
+  }
+
+  .welcome-dashboard {
+    padding: 15px;
+    max-width: 90%; /* Adjusted for smaller screens */
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-dashboard {
+    padding: 10px;
+    max-width: 100%; /* Full width on the smallest screens */
+  }
+
+  .card {
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .card-footer-right p {
+    margin: 4px 5px;
+  }
+}

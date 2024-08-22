@@ -43,13 +43,11 @@ function Card({ data }) {
         </div>
         <div className="card-footer">
           <div className="card-footer-left">
-            <p>
-              {filteredData.length} submissions in {selectedYear}
-            </p>
+            <p>{/* {filteredData.length} submissions in {selectedYear} */}</p>
           </div>
           <div className="card-footer-right">
             <p>Total active days: {filteredData.length}</p>
-            <p>Max streak: 5</p>
+            <p></p>
             <select value={selectedYear} onChange={handleYearChange}>
               <option value={currentYear}>Current</option>
               <option value={currentYear - 1}>{currentYear - 1}</option>

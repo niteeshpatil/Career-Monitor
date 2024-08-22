@@ -7,5 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface LinksDao extends JpaRepository<Link,Integer>{
 
+    boolean existsByCompany(String company);
 }
 

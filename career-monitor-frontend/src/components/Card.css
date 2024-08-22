@@ -1,27 +1,32 @@
-/* Card.css */
 .card {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
-  margin: 16px;
+  margin: 16px auto; /* Center the card horizontally */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #ffffff;
   max-width: fit-content; /* Adjusts card width to fit content */
+  display: flex; /* Center the content inside the card */
+  flex-direction: column; /* Keep the card content in a column */
+  align-items: center; /* Center content horizontally */
 }
 
 .card-content {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Center content horizontally */
 }
 
 .card-body {
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .card-footer {
   display: flex;
   justify-content: flex-end; /* Align items to the end of the footer */
   align-items: center;
+  width: 100%;
 }
 
 .card-footer-left {

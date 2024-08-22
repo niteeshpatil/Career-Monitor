@@ -1,0 +1,180 @@
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh; /* Ensure it takes up the full viewport height */
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in the width/height calculations */
+}
+
+.dashboard-content {
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  width: 90%; /* Ensures it takes up most of the screen width */
+  max-width: 2400px; /* Allow up to 2400px width on large screens */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+@media (max-width: 1600px) {
+  .dashboard-content {
+    max-width: 1400px; /* Adjust for medium screens */
+  }
+}
+
+@media (max-width: 1200px) {
+  .dashboard-content {
+    max-width: 1000px; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 1.5rem;
+    width: 95%; /* Reduce padding and ensure almost full width on small screens */
+    max-width: 700px; /* Further adjust for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-content {
+    padding: 1rem;
+    width: 100%; /* Ensure full width on the smallest screens */
+    max-width: 100%; /* No max-width constraint on very small screens */
+  }
+}
+
+.heading-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  position: relative; /* Position relative for the icon */
+}
+
+.info-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  cursor: pointer;
+  color: #007bff; /* Blue color for the icon */
+  font-size: 2rem; /* Larger icon size */
+  text-align: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  line-height: 2.5rem; /* Center icon vertically */
+  background-color: #ffffff; /* White background for the icon */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for better visibility */
+}
+
+.dashboard-heading {
+  text-align: center;
+  font-size: 1.75rem; /* Slightly larger heading */
+  color: #343a40; /* Dark color for the heading */
+}
+
+.search-container {
+  margin-bottom: 1rem; /* Space below the search bar */
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+}
+
+.table-container {
+  max-height: 400px; /* Set a fixed height for the table container */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.table {
+  width: 900px; /* Ensure the table takes full width */
+  border-collapse: collapse; /* Collapse borders */
+  margin-bottom: 1rem; /* Space below the table */
+}
+
+.table-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari, and other WebKit-based browsers */
+}
+.table th,
+.table td {
+  padding: 0.75rem; /* Padding for cells */
+  border: 1px solid #dee2e6; /* Light border for cells */
+  text-align: left; /* Left-align text */
+}
+
+.table thead th {
+  background-color: #e9ecef; /* Light background for header */
+  font-weight: bold; /* Bold text for header */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f2f2f2; /* Alternating row colors for better readability */
+}
+
+.text-danger {
+  color: #dc3545; /* Red color for error messages */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+.info-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  cursor: pointer;
+  color: #007bff; /* Blue color for the icon */
+  font-size: 2rem; /* Larger icon size */
+  text-align: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  line-height: 2.5rem; /* Center icon vertically */
+  background-color: #ffffff; /* White background for the icon */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for better visibility */
+}
+
+.delete-icon {
+  position: absolute;
+  top: 0;
+  right: 3rem; /* Adjust as needed */
+  margin: 1rem;
+  cursor: pointer;
+  color: #dc3545; /* Red color for delete icon */
+  font-size: 1.75rem; /* Adjust size */
+  text-align: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  line-height: 2.5rem; /* Center icon vertically */
+  background-color: #ffffff; /* White background for the icon */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for better visibility */
+}
+
+.search-container {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 1rem; /* Space below the search bar */
+}
+
+.search-container input {
+  flex: 1; /* Make input take available space */
+  padding: 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem; /* Space between input and icon */
+  width: 100%; /* Ensure the input takes full width of its container */
+  max-width: 300px; /* Maximum width to prevent it from growing too large */
+}
+
+.search-container .edit-icon {
+  cursor: pointer;
+  color: #007bff; /* Blue color for the icon */
+  font-size: 1.25rem; /* Adjust icon size */
+}
